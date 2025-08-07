@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='timer.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='quotes.css') }}" />
+  </head>
+  <body>
+    <div id="pomodoro-timer">
+      <h1 id="timer-header">Таймер pomodoro</h1>
+      <div id="timer" data-minutes="{{ minutes }}" data-seconds="{{ seconds }}">25:00</div>
+      <button id="startBtn">Начать работу</button>
+      <button id="pauseBtn">Пауза</button>
+      <button id="resetBtn">Сбросить таймер</button>
+
+      <script src="{{ url_for('static', filename='js_scripts/timer.js') }}"></script>
+    </div>
+
+    <div id="quotes">
+      <h1 id="quotes-header">Цитата</h1>
+      <p id="quote">{{ quote }}</p>
+      <button id="generateQuote">Сгенерировать цитату</button>
+
+      <script src="{{ url_for('static', filename='js_scripts/quotes.js') }}"></script>
+    </div>
+  </body>
+</html>
