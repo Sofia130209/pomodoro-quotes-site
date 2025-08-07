@@ -1,12 +1,11 @@
-import os
-import requests
+import os, requests
 from flask import Flask, render_template, jsonify
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
-load_dotenv()
+#load_dotenv()
 
 app = Flask(__name__, template_folder="templates", static_folder="static")
-app.secret_key = os.getenv("SECRET_KEY")
+#app.secret_key = os.getenv("SECRET_KEY")
 
 
 # TODO : функции для корректной работы приложения
